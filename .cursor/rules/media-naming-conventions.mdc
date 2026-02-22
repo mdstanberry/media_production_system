@@ -1,0 +1,59 @@
+---
+description: File and folder naming conventions for all media production assets
+alwaysApply: true
+---
+
+# Media Production Naming Conventions
+
+Always follow these conventions when creating, renaming, or referencing media project files and folders.
+
+## Project Folder
+
+Pattern: `YYYYMMDD_[topic-slug]/`
+
+```
+20260301_building-data-governance/
+```
+
+- Date is the **planned publish date**, not the creation date
+- Topic slug: lowercase, words separated by hyphens, no spaces or underscores
+
+## Project Sub-folders
+
+Every project folder must contain exactly these sub-folders:
+
+```
+YYYYMMDD_[topic-slug]/
+├── aroll/               ← talking head / camera footage
+├── screen/              ← screen recordings
+├── assets/
+│   ├── canva-exports/   ← exported graphics from Canva
+│   └── reference/       ← reference images, inspiration, brand assets
+├── export/              ← final rendered output files
+└── _COWORK_INSTRUCTIONS.md
+```
+
+## Export Files
+
+| Asset | Pattern | Example |
+|-------|---------|---------|
+| Final video | `YYYYMMDD_[topic-slug]_v1.mp4` | `20260301_building-data-governance_v1.mp4` |
+| Camtasia project | `YYYYMMDD_[topic-slug]_v1.tscproj` | `20260301_building-data-governance_v1.tscproj` |
+| Thumbnail A | `YYYYMMDD_[topic-slug]_thumb-A.png` | `20260301_building-data-governance_thumb-A.png` |
+| Thumbnail B | `YYYYMMDD_[topic-slug]_thumb-B.png` | `20260301_building-data-governance_thumb-B.png` |
+
+- Version suffix (`_v1`, `_v2`) increments on major re-edits
+- Thumbnails use `-A` / `-B` for A/B test variants
+
+## Channel Configs
+
+Platform publishing specs live in `/channels/`:
+
+```
+channels/
+├── youtube.md           ← active v1.0
+├── linkedin-video.md    ← planned
+└── podcast.md           ← planned
+```
+
+One file per distribution channel. Status noted at top of each file.
