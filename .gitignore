@@ -2,6 +2,11 @@
 .env
 .env.local
 .env.*.local
+*.env                    # catches any environment file variant (e.g. production.env, test.env)
+
+# Local video project folders
+# Video files are too large for Git and are managed locally — only the _PROJECT_TEMPLATE is tracked
+projects/[0-9]*/
 
 # Python
 __pycache__/
